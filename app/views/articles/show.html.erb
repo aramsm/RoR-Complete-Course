@@ -1,4 +1,4 @@
-<h1 class="text-center"><%= @article.title %></h1>
+<h1 class="text-center page-header"><%= @article.title %></h1>
 <hr>
 <div class="row">
 	<div class="col-md-8">
@@ -14,3 +14,5 @@
 		</ul>
 	</div>
 </div>
+<%= link_to 'Back to articles list', articles_path %> |
+<%= link_to 'Edit', edit_article_path(@article) %>
