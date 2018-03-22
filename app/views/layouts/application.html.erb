@@ -12,41 +12,11 @@
   </head>
   <body style="padding-top: 60px; padding-bottom: 60px;">
   	<header class="fixed-top">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			  <a class="navbar-brand text-white">Alpha Blog</a>
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"></span>
-			  </button>
-			  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-			    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-			      <li class="nav-item">
-			        <%= link_to 'Home', root_path, class: "nav-link" %>
-			      </li>
-			      <li class="nav-item">
-			        <%= link_to 'About', about_path, class: "nav-link" %>
-			      </li>
-            <li class="nav-item">
-              <%= link_to 'Articles', articles_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'New Article', new_article_path, class: "nav-link" %>
-            </li>
-			    </ul>
-			  </div>
-			</nav>
+			<%= render 'layouts/navbar' %>
 	  </header>
 
     <main class="container" role="main">
-      <% flash.each do |name, msg| %>
-        <div class="alert alert-<%= name %> alert-dismissible fade show" role="alert">
-          <ul>
-            <li><%= msg %>
-          </ul>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      <% end %>
+      <%= render 'layouts/messages' %>
     	<%= yield %>
     </main>
 
