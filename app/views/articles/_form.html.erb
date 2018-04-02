@@ -1,27 +1,27 @@
 <%= form_for @article do |f| %>
   <div class="form-group row">
-	  <%= f.label :title, class: 'col-sm-2 col-form-label' %>
-	  <%= f.text_field(
-	    :title,
-	    class: 'col-sm-8 form-control',
-	    placeholder: "Article's Title",
-	    autofocus: true
-	  ) %>
+    <%= f.label :title, class: 'col-sm-2 col-form-label' %>
+    <%= f.text_field(
+      :title,
+      class: 'col-sm-8 form-control',
+      placeholder: "Article's Title",
+      autofocus: true
+    ) %>
   </div>
   <div class="form-group row">
-  	<%= f.label :description, class: 'col-sm-2 col-form-label' %>
+    <%= f.label :description, class: 'col-sm-2 col-form-label' %>
     <%= f.text_area :description, class: 'col-sm-8 form-control' %>
   </div>
   <div class="form-group row">
-  	<div class="col-sm-10" id="form-buttons-col">
-  		<div class="btn-toolbar float-right" role="toolbar">
-		  	<div class="btn-group mr-2" role="group">
-		      <%= link_to 'Cancel', articles_path, class: 'btn btn-secondary' %>
-		  	</div>
-		  	<div class="btn-group" role="group">
-		      <%= f.submit buttom_label, class: 'btn btn-primary' %>
-		  	</div>
-		  </div>
-  	</div>
-	</div>
+    <div class="col-sm-10" id="form-buttons-col">
+      <div class="btn-toolbar float-right" role="toolbar">
+        <div class="btn-group mr-2" role="group">
+          <%= link_to 'Cancel', articles_path, class: 'btn btn-secondary' %>
+        </div>
+        <div class="btn-group" role="group">
+          <%= f.submit buttom_label, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  </div>
 <% end %>
