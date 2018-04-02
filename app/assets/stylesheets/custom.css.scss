@@ -14,8 +14,27 @@
   padding-right: 0px;
 }
 
+.article-body {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.article-title {
+  font-weight: bold;
+  font-sixe: 1.5em;
+  color: black;
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.10);
+}
+
 .center {
   text-align: center;
+}
+
+.color-black {
+  color: #343b40;
 }
 
 .jumbotron {
@@ -33,10 +52,10 @@
   font-weight: bold;
 }
 
-.table td {
-  border-top: none;
-}
-
 .flash-ul {
   margin: 0px;
+}
+
+.card {
+  margin-bottom: 15px;
 }
