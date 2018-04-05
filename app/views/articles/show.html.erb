@@ -4,13 +4,24 @@
   <div class="col-md-8">
     <%= simple_format(@article.description) %>
   </div>
-  <div class="col-md-4 bg-light rounded">
-    <h2>Author</h2>
-    <img src="http://i0.kym-cdn.com/photos/images/original/001/301/496/d2d.jpg" class="rounded-circle" height="75" width="75">
-    <ul style="padding-top: 5px">
-      <li>Name: Skeletor</li>
-      <li>Age: n/a</li>
-      <li>Occupation: Would-be conqueror Senior</li>
+  <div class="col-md-4 bg-light rounded center">
+  	<h2>Author</h2>
+    <ul class="listing">
+      <div class="row">
+        <div class="col-md-12">
+          <li>
+          	<%= link_to gravatar_for(@article.user), user_path(@article.user) %>
+          </li>
+          <li class="article-title">
+          	<%= link_to @article.user.username, user_path(@article.user) %>
+          </li>
+          <li>
+            <small>
+              <%= pluralize(@article.user.articles.count, 'article') if @article.user.articles.exists? %>
+            </small>
+          </li>
+        </div>
+      </div>
     </ul>
   </div>
 </div>

@@ -29,6 +29,11 @@
   color: black;
 }
 
+.card {
+  margin-bottom: 15px;
+  padding: 0px;
+}
+
 .card-header {
   background-color: rgba(0, 0, 0, 0.10);
 }
@@ -39,6 +44,10 @@
 
 .color-black {
   color: #343b40;
+}
+
+.flash-ul {
+  margin: 0px;
 }
 
 .jumbotron {
@@ -56,14 +65,13 @@
   font-weight: bold;
 }
 
-.flash-ul {
-  margin: 0px;
+.listing {
+	list-style: none;
+	padding-left: 0px;
 }
 
-.card {
-  margin-bottom: 15px;
-}
-
-.card {
-  padding: 0px;
+.page-header {
+  margin-top: 15px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #eaeaea;
 }
