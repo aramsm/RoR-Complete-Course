@@ -1,7 +1,7 @@
 <h1 class="text-center page-header">Listing all articles</h1>
 
 <% @articles.each do |article| %>
-  <div class="row card">
+  <div class="col-sm-12 row card">
     <div class="card-header article-title bg-grey">
       <%= link_to article.title, article_path(article), class: 'color-black' %>
     </div>
