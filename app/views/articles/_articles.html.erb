@@ -1,0 +1,35 @@
+<% object.each do |article| %>
+  <div class="col-sm-12 row card">
+    <div class="card-header article-title bg-grey">
+      <%= link_to article.title, article_path(article), class: 'color-black' %>
+    </div>
+    <div class="card-body bg-light">
+      <div class="article-body card-text">
+        <%= truncate(article.description, length: 100) %>
+        <div class="article-meta-details">
+          <small>
+            Created by: <%= article.user.username %>,
+            <%= time_ago_in_words(article.created_at) %> ago,
+            last updated: <%= time_ago_in_words(article.updated_at) %> ago
+          </small>
+        </div>
+      </div>
+      <div class="article-actions btn-group">
+        <%= link_to(
+          'Edit',
+          edit_article_path(article),
+          class: 'btn btn-sm btn-secondary',
+          title: 'Edit'
+        ) %>
+        <%= link_to(
+          'Delete',
+          article_path(article),
+          method: :delete,
+          data: { confirm: 'Are you sure you want to delete the article?' },
+          class: 'btn btn-sm btn-danger',
+          title: 'Delete'
+        ) %>
+      </div>
+    </div>
+  </div>
+<% end %>
