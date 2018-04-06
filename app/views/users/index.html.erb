@@ -1,20 +1,25 @@
 <h1 class="text-center page-header">All Alpha Bloggers</h1>
+
+<%= will_paginate renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer %>
+
 <div class="center">
   <% @users.each do |user| %>
     <ul class="listing">
       <div class="row">
         <div class="col-md-12">
-        	<div class="bg-light rounded">
-	          <li><%= link_to gravatar_for(user), user_path(user) %></li>
-	          <li class="article-title"><%= link_to user.username, user_path(user) %></li>
-	          <li>
-	            <small>
-	              <%= pluralize(user.articles.count, 'article') if user.articles.exists? %>
-	            </small>
-	          </li>
-	        </div>
+          <div class="bg-light rounded">
+            <li><%= link_to gravatar_for(user), user_path(user) %></li>
+            <li class="article-title"><%= link_to user.username, user_path(user) %></li>
+            <li>
+              <small>
+                <%= pluralize(user.articles.count, 'article') if user.articles.exists? %>
+              </small>
+            </li>
+          </div>
         </div>
       </div>
     </ul>
   <% end %>
 </div>
+
+<%= will_paginate renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer %>

@@ -1,3 +1,7 @@
 <h1 class="text-center page-header">Listing all articles</h1>
 
+<%= will_paginate renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer %>
+
 <%= render 'articles', object: @articles %>
+
+<%= will_paginate renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer %>

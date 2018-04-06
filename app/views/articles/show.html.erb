@@ -5,15 +5,15 @@
     <%= simple_format(@article.description) %>
   </div>
   <div class="col-md-4 bg-light rounded center">
-  	<h2>Author</h2>
+    <h2>Author</h2>
     <ul class="listing">
       <div class="row">
         <div class="col-md-12">
           <li>
-          	<%= link_to gravatar_for(@article.user), user_path(@article.user) %>
+            <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
           </li>
           <li class="article-title">
-          	<%= link_to @article.user.username, user_path(@article.user) %>
+            <%= link_to @article.user.username, user_path(@article.user) %>
           </li>
           <li>
             <small>

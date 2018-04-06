@@ -5,6 +5,18 @@
   </div>
 </div>
 
-<h4 align="center"><%= @user.username %>'s articles</h4>
+<h4 align="center" style="margin-top: 5px; margin-bottom: 30px;">
+	<%= @user.username %>'s articles
+</h4>
 
-<%= render 'articles/articles', object: @user.articles %>
+<%= will_paginate(
+  @user_articles,
+  renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer
+) %>
+
+<%= render 'articles/articles', object: @user_articles %>
+
+<%= will_paginate(
+  @user_articles,
+  renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer
+) %>

@@ -66,12 +66,16 @@
 }
 
 .listing {
-	list-style: none;
-	padding-left: 0px;
+  list-style: none;
+  padding-left: 0px;
 }
 
 .page-header {
   margin-top: 15px;
-	margin-bottom: 30px;
-	border-bottom: 1px solid #eaeaea;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.pagination {
+  justify-content: center;
 }
